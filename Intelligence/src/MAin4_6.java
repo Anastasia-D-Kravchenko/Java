@@ -1,13 +1,13 @@
 public class MAin4_6 {
-    public static void main(String[] args){
-    int[] arr = new int[10];
-    for (int i=0;i<arr.length;i++){
-        arr[i] = (int) (Math.random()*100);
-    }
-    for(int i: arr){
-        System.out.print(i+" ");
-    }
-    System.out.println();
+    public static void main(String[] args) {
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() * 100);
+        }
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
     for (int i=0;i<arr.length;i++){
         for (int j=0;j<i;j++){
             if (arr[i]>arr[j]){
@@ -17,9 +17,9 @@ public class MAin4_6 {
             }
         }
     }
-    for(int i: arr){
-        System.out.print(i+" ");
-    }
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
     }
 }
 
