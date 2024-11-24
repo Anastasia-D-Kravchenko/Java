@@ -15,7 +15,7 @@ public class Main5_7 {
             }
             System.out.println();
         }
-        for (int num : arr) {
+        for (int num = 0; num <= arr.length-1; num++) {
             System.out.print(num + " ");
         }
     }
