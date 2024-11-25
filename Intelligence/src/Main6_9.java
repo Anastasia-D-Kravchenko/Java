@@ -20,7 +20,24 @@ public class Main6_9 {
                 col = scanner.nextInt()-1;
             } while (row < 0 || row > 2 || col < 0 || col > 2 || board[row][col] != ' ');
             board[row][col] = currentPlayer;
-            if (checkWin(board, currentPlayer)) {
+            boolean checkWin = false;
+            for (int i = 0; i < 3; i++) {
+                if (board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) {
+                    checkWin = true;
+                }
+            }
+            for (int j = 0; j < 3; j++) {
+                if (board[0][j] == currentPlayer && board[1][j] == currentPlayer && board[2][j] == currentPlayer) {
+                    checkWin = true;
+                }
+            }
+            if (board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) {
+                checkWin = true;
+            }
+            if (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer) {
+                checkWin = true;
+            }
+            if (checkWin) {
                 printBoard(board);
                 System.out.println("Player " + currentPlayer + " wins!");
                 break;
@@ -44,25 +61,6 @@ public class Main6_9 {
                 System.out.print("----");
             }System.out.println("-");
         }
-    }
-    private static boolean checkWin(char[][] board, char player) {
-        for (int i = 0; i < 3; i++) {
-            if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
-                return true;
-            }
-        }
-        for (int j = 0; j < 3; j++) {
-            if (board[0][j] == player && board[1][j] == player && board[2][j] == player) {
-                return true;
-            }
-        }
-        if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
-            return true;
-        }
-        if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
-            return true;
-        }
-        return false;
     }
     private static boolean isBoardFull(char[][] board) {
         for (int i = 0; i < 3; i++) {
