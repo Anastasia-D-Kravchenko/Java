@@ -127,30 +127,84 @@ public class Main_try {
 //        System.out.println();
 //    }
 
+    //    public static void main(String[] args) {
+//        Point pp = new Point(2, 1);
+//        Point pt = new Pixel();
+//        pt.x = 1;
+//        pt.y = 2;
+//        Pixel px = new Pixel(new Color(255, 51, 102));
+//
+//        System.out.println("is 'pp' a Point? " + (pp instanceof Point)); // true
+//        System.out.println("is 'pp' a Pixel? " + (pp instanceof Pixel)); // false
+//        System.out.println("is 'pt' a Point? " + (pt instanceof Point)); // true
+//        System.out.println("is 'pt' a Pixel? " + (pt instanceof Pixel)); // true
+//        System.out.println("is 'px' a Point? " + (px instanceof Point)); // true
+//        System.out.println("is 'px' a Pixel? " + (px instanceof Pixel)); // true
+//        System.out.println("class of pp: " + pp.getClass().getName()); // Point
+//        System.out.println("class of pt: " + pt.getClass().getName()); // Pixel
+//        System.out.println("class of px: " + px.getClass().getName()); // Pixel
+//
+//        // Pixel is a Point; we can translate or scale it
+//        px.translate(5, 4).scale(2, 3).translate(-1, -3);
+//        System.out.println("pp: " + pp); // [2, 1]
+//        System.out.println("pt: " + pt); // [1, 2](r=0,g=0,b=0)
+//        System.out.println("px: " + px); // [9, 9](r=255,g=51,b=102)
+//        System.out.println("Color px : " + px.getColor()); // java.awt.Color[r=255,g=51,b=102]
+//        // Casting required!
+//        System.out.println("Color pt : " + ((Pixel) pt).getColor()); // java.awt.Color[r=0,g=0,b=0]
+//    }
+//public static void main ( String [] args ) {
+//    Main12_1 [] students = new Main12_1 [10];
+//    for (int i = 0; i < students . length ; i ++)
+//        students [ i ] = new Main12_1 () ;
+//    for ( Main12_1 s : students )
+//        System . out . println ( s . getIndexNumber () ) ;
+//}
     public static void main(String[] args) {
-        Point pp = new Point(2, 1);
-        Point pt = new Pixel();
-        pt.x = 1;
-        pt.y = 2;
-        Pixel px = new Pixel(new Color(255, 51, 102));
+//        Ball[] students = new Ball[10];
+//        for (int i = 0; i < students.length; i++)
+//            students[i] = Ball.makeBall();
+//        Ball.showCounter();
 
-        System.out.println("is 'pp' a Point? " + (pp instanceof Point)); // true
-        System.out.println("is 'pp' a Pixel? " + (pp instanceof Pixel)); // false
-        System.out.println("is 'pt' a Point? " + (pt instanceof Point)); // true
-        System.out.println("is 'pt' a Pixel? " + (pt instanceof Pixel)); // true
-        System.out.println("is 'px' a Point? " + (px instanceof Point)); // true
-        System.out.println("is 'px' a Pixel? " + (px instanceof Pixel)); // true
-        System.out.println("class of pp: " + pp.getClass().getName()); // Point
-        System.out.println("class of pt: " + pt.getClass().getName()); // Pixel
-        System.out.println("class of px: " + px.getClass().getName()); // Pixel
 
-        // Pixel is a Point; we can translate or scale it
-        px.translate(5, 4).scale(2, 3).translate(-1, -3);
-        System.out.println("pp: " + pp); // [2, 1]
-        System.out.println("pt: " + pt); // [1, 2](r=0,g=0,b=0)
-        System.out.println("px: " + px); // [9, 9](r=255,g=51,b=102)
-        System.out.println("Color px : " + px.getColor()); // java.awt.Color[r=255,g=51,b=102]
-        // Casting required!
-        System.out.println("Color pt : " + ((Pixel) pt).getColor()); // java.awt.Color[r=0,g=0,b=0]
+//        Cat whiskers = new Cat("Whiskers", 1, 5, 2020, null, null);
+//        int currentDay = 13;
+//        int currentMonth = 12;
+//        int currentYear = 2024;
+//        if (whiskers.isAdult(currentDay, currentMonth, currentYear)) {
+//            System.out.println(whiskers.name + " is an adult cat.");
+//        } else {
+//            System.out.println(whiskers.name + " is still a kitten.");
+//        }
+//        System.out.println("Intel about Whiskers: ");
+//        whiskers.show();
+//        Cat mittens = new Cat("Mittens", 15, 6, 2023, whiskers, null);
+//        System.out.println("Intel about Mittens: ");
+//        mittens.show();
+//        mittens.showParents();
+
+//        Cat cat1 = new Cat("Whiskers", 1, 5, 2020, null, null);
+//        Cat cat2 = new Cat("Mittens", 15, 6, 2023, cat1, null);
+//        Cat cat3 = new Cat("Snowball", 15, 6, 2023, cat1, null);
+//        Cat cat4 = new Cat("Keo", 1, 5, 2020, null, null);
+//        Cat cat5 = new Cat("Meo", 15, 6, 2023, cat4, null);
+//        Cat cat6 = new Cat("Leo", 15, 6, 2023, cat4, null);
+//        Cattery happyCats = new Cattery("Happy Cats");
+//        Cat[] litter1 = {cat2, cat3};
+////        Cat[] litter2 = {cat5, cat6};
+//        Cat[] litter2 = {cat5, cat3, cat6};
+//        happyCats.addLitter(litter1);
+//        happyCats.addLitter(litter2);
+//        happyCats.show();
+
+
+        Person1 person1 = new Person1("Alice", 1985);
+        Person1 person2 = new Person1("Bob"); // Default birth year is 1990
+        Person1 person3 = new Person1("Charlie", 1975);
+        Person1 olderPerson = Person1.getOlder(person1, person2);
+        System.out.println("The older person is: " + olderPerson.getName());
+        Person1[] people = {person1, person2, person3};
+        Person1 oldestPerson = Person1.getOldest(people);
+        System.out.println("The oldest person is: " + oldestPerson.getName());
     }
 }
