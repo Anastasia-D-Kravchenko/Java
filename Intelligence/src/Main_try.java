@@ -160,51 +160,72 @@ public class Main_try {
 //    for ( Main12_1 s : students )
 //        System . out . println ( s . getIndexNumber () ) ;
 //}
+//    public static void main(String[] args) {
+////        Ball[] students = new Ball[10];
+////        for (int i = 0; i < students.length; i++)
+////            students[i] = Ball.makeBall();
+////        Ball.showCounter();
+//
+//
+////        Cat whiskers = new Cat("Whiskers", 1, 5, 2020, null, null);
+////        int currentDay = 13;
+////        int currentMonth = 12;
+////        int currentYear = 2024;
+////        if (whiskers.isAdult(currentDay, currentMonth, currentYear)) {
+////            System.out.println(whiskers.name + " is an adult cat.");
+////        } else {
+////            System.out.println(whiskers.name + " is still a kitten.");
+////        }
+////        System.out.println("Intel about Whiskers: ");
+////        whiskers.show();
+////        Cat mittens = new Cat("Mittens", 15, 6, 2023, whiskers, null);
+////        System.out.println("Intel about Mittens: ");
+////        mittens.show();
+////        mittens.showParents();
+//
+////        Cat cat1 = new Cat("Whiskers", 1, 5, 2020, null, null);
+////        Cat cat2 = new Cat("Mittens", 15, 6, 2023, cat1, null);
+////        Cat cat3 = new Cat("Snowball", 15, 6, 2023, cat1, null);
+////        Cat cat4 = new Cat("Keo", 1, 5, 2020, null, null);
+////        Cat cat5 = new Cat("Meo", 15, 6, 2023, cat4, null);
+////        Cat cat6 = new Cat("Leo", 15, 6, 2023, cat4, null);
+////        Cattery happyCats = new Cattery("Happy Cats");
+////        Cat[] litter1 = {cat2, cat3};
+//////        Cat[] litter2 = {cat5, cat6};
+////        Cat[] litter2 = {cat5, cat3, cat6};
+////        happyCats.addLitter(litter1);
+////        happyCats.addLitter(litter2);
+////        happyCats.show();
+//
+//
+//        Person1 person1 = new Person1("Alice", 1985);
+//        Person1 person2 = new Person1("Bob"); // Default birth year is 1990
+//        Person1 person3 = new Person1("Charlie", 1975);
+//        Person1 olderPerson = Person1.getOlder(person1, person2);
+//        System.out.println("The older person is: " + olderPerson.getName());
+//        Person1[] people = {person1, person2, person3};
+//        Person1 oldestPerson = Person1.getOldest(people);
+//        System.out.println("The oldest person is: " + oldestPerson.getName());
+//    }
     public static void main(String[] args) {
-//        Ball[] students = new Ball[10];
-//        for (int i = 0; i < students.length; i++)
-//            students[i] = Ball.makeBall();
-//        Ball.showCounter();
-
-
-//        Cat whiskers = new Cat("Whiskers", 1, 5, 2020, null, null);
-//        int currentDay = 13;
-//        int currentMonth = 12;
-//        int currentYear = 2024;
-//        if (whiskers.isAdult(currentDay, currentMonth, currentYear)) {
-//            System.out.println(whiskers.name + " is an adult cat.");
-//        } else {
-//            System.out.println(whiskers.name + " is still a kitten.");
-//        }
-//        System.out.println("Intel about Whiskers: ");
-//        whiskers.show();
-//        Cat mittens = new Cat("Mittens", 15, 6, 2023, whiskers, null);
-//        System.out.println("Intel about Mittens: ");
-//        mittens.show();
-//        mittens.showParents();
-
-//        Cat cat1 = new Cat("Whiskers", 1, 5, 2020, null, null);
-//        Cat cat2 = new Cat("Mittens", 15, 6, 2023, cat1, null);
-//        Cat cat3 = new Cat("Snowball", 15, 6, 2023, cat1, null);
-//        Cat cat4 = new Cat("Keo", 1, 5, 2020, null, null);
-//        Cat cat5 = new Cat("Meo", 15, 6, 2023, cat4, null);
-//        Cat cat6 = new Cat("Leo", 15, 6, 2023, cat4, null);
-//        Cattery happyCats = new Cattery("Happy Cats");
-//        Cat[] litter1 = {cat2, cat3};
-////        Cat[] litter2 = {cat5, cat6};
-//        Cat[] litter2 = {cat5, cat3, cat6};
-//        happyCats.addLitter(litter1);
-//        happyCats.addLitter(litter2);
-//        happyCats.show();
-
-
-        Person1 person1 = new Person1("Alice", 1985);
-        Person1 person2 = new Person1("Bob"); // Default birth year is 1990
-        Person1 person3 = new Person1("Charlie", 1975);
-        Person1 olderPerson = Person1.getOlder(person1, person2);
-        System.out.println("The older person is: " + olderPerson.getName());
-        Person1[] people = {person1, person2, person3};
-        Person1 oldestPerson = Person1.getOldest(people);
-        System.out.println("The oldest person is: " + oldestPerson.getName());
+        // Task I: Singly Linked List
+        SinglyLL list1 = new SinglyLL();
+        list1.add(10);
+        list1.add(20);
+        list1.add(30);
+        list1.show(); // Output: [ 10 20 30 ]
+        // Task II: Sorted Singly Linked List
+        SortedSLL list2 = new SortedSLL();
+        list2.addSorted(30);
+        list2.addSorted(10);
+        list2.addSorted(20);
+        list2.show(); // Output: [ 10 20 30 ]
+        // Task III: Node Operations
+        int[] arr = {5, 2, 8, 1, 9};
+        Node head = NodeOperations.arrayToList(arr);
+        NodeOperations.showList(head); // Output: [ 5 2 8 1 9 ]
+        Node[] extractedLists = NodeOperations.extract(head);
+        NodeOperations.showList(extractedLists[0]); // Output: [ 2 8 ]
+        NodeOperations.showList(extractedLists[1]); // Output: [ 5 1 9 ]
     }
 }
