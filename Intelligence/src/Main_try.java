@@ -207,25 +207,69 @@ public class Main_try {
 //        Person1 oldestPerson = Person1.getOldest(people);
 //        System.out.println("The oldest person is: " + oldestPerson.getName());
 //    }
+//    public static void main(String[] args) {
+//        // Task I: Singly Linked List
+//        SinglyLL list1 = new SinglyLL();
+//        list1.add(10);
+//        list1.add(20);
+//        list1.add(30);
+//        list1.show(); // Output: [ 10 20 30 ]
+//        // Task II: Sorted Singly Linked List
+//        SortedSLL list2 = new SortedSLL();
+//        list2.addSorted(30);
+//        list2.addSorted(10);
+//        list2.addSorted(20);
+//        list2.show(); // Output: [ 10 20 30 ]
+//        // Task III: Node Operations
+//        int[] arr = {5, 2, 8, 1, 9};
+//        Node head = NodeOperations.arrayToList(arr);
+//        NodeOperations.showList(head); // Output: [ 5 2 8 1 9 ]
+//        Node[] extractedLists = NodeOperations.extract(head);
+//        NodeOperations.showList(extractedLists[0]); // Output: [ 2 8 ]
+//        NodeOperations.showList(extractedLists[1]); // Output: [ 5 1 9 ]
+//    }
+//    public static void main ( String [] args ) {
+//        Animal[] a = {new Snake (" Bun", " Dog", 4, " Bambi ", true )} ;
+////        Snake s = new Snake (" Bambi ", true ) ;
+////        Animal[] animals = {a , s };
+////        for ( int i = 0; i < animals . length ; i ++)
+////            System . out . println ( animals [ i ]) ;
+////        s . bite () ;
+////        animals[1].bite();
+//        for (Animal dish : a) {
+//            System.out.println(dish);
+//        }
+//    }
     public static void main(String[] args) {
-        // Task I: Singly Linked List
-        SinglyLL list1 = new SinglyLL();
-        list1.add(10);
-        list1.add(20);
-        list1.add(30);
-        list1.show(); // Output: [ 10 20 30 ]
-        // Task II: Sorted Singly Linked List
-        SortedSLL list2 = new SortedSLL();
-        list2.addSorted(30);
-        list2.addSorted(10);
-        list2.addSorted(20);
-        list2.show(); // Output: [ 10 20 30 ]
-        // Task III: Node Operations
-        int[] arr = {5, 2, 8, 1, 9};
-        Node head = NodeOperations.arrayToList(arr);
-        NodeOperations.showList(head); // Output: [ 5 2 8 1 9 ]
-        Node[] extractedLists = NodeOperations.extract(head);
-        NodeOperations.showList(extractedLists[0]); // Output: [ 2 8 ]
-        NodeOperations.showList(extractedLists[1]); // Output: [ 5 1 9 ]
+//        Dish[] dishes = {
+//                new Pierogi("Ruskie", 5, true, "Potato and Cheese"),
+//                new Barszcz("Czerwony", 3, true, "Red Beetroot"),
+//                new Dish("Salad", 2, false)
+//        };
+//        for (Dish dish : dishes) {
+//            System.out.println(dish);
+//        }
+//        for (Dish dish : dishes) {
+//            dish.takeAPortion(); 
+//        }
+        Phone[] phones = new Phone[3];
+        phones[0] = new Phone("Wired", "Black");
+        phones[1] = new CellPhone("GSM", "Silver");
+        phones[2] = new Smartphone("4G", "Gold");
+        // Add friends to the Smartphone
+        Smartphone smartphone = (Smartphone) phones[2];
+        smartphone.addFriend(new Persony("John", "Doe", "123-456-789"));
+        smartphone.addFriend(new Persony("Jane", "Smith", "987-654-321"));
+        // Make calls on each phone
+        for (Phone phone : phones) {
+            for (int i = 0; i < 10; i++) {
+                phone.makeCall("Call " + i);
+            }
+        }
+        // Display call history for each phone
+        for (Phone phone : phones) {
+            phone.displayCallHistory();
+            System.out.println();
+        }
     }
 }
