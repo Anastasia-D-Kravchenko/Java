@@ -5,11 +5,14 @@ public class EquToString {
         PersonGood john = new PersonGood("John", 1980);
         PersonBad billy = new PersonBad("Bill", 1980);
         PersonBad bill = new PersonBad("Bill", 1980);
-
+        System.out.println(johny);
+        System.out.println(john);
         if (johny.equals(john))
             System.out.println("johny == john");
         else
             System.out.println("johny != john");
+        System.out.println(billy);
+        System.out.println(bill);
         if (billy.equals(bill))
             System.out.println("billy == bill");
         else
@@ -35,6 +38,10 @@ class PersonBad {
     public int getYear() {
         return byear;
     }
+//    @Override
+//    public String toString() {
+//        return name + "(" + byear + ")";
+//    }
 }
 
 class PersonGood {
@@ -54,20 +61,20 @@ class PersonGood {
         return byear;
     }
 
-    @Override
-    public String toString() {
-        return name + "(" + byear + ")";
-    }
+//    @Override
+//    public String toString() {
+//        return name + "(" + byear + ")";
+//    }
 
     @Override
     public boolean equals(Object ob) {
         if (ob == null || getClass() != ob.getClass()) return false;
+//        System.out.println(getClass());
         PersonGood p = (PersonGood) ob;
         return name.equals(p.name) && byear == p.byear;
     }
-
-    // Added method for copying a PersonGood object
-    public PersonGood copy() {
-        return new PersonGood(name, byear); // Create a new object with the same values
-    }
+//    public boolean equals(PersonGood ob) {
+//        if (ob == null || getClass() != ob.getClass()) return false;
+//        return name.equals(ob.name) && byear == ob.byear;
+//    }
 }

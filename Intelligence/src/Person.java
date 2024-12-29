@@ -25,25 +25,13 @@
 //        return birthYear < other.birthYear;
 //    }
 //}
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class Person {
-
     private String name;
     private String idNumber;
-
     public Person(String name, String idNumber) {
         this.name = name;
         this.idNumber = idNumber;
     }
-
-    // Added a copy() method to create a copy of the Person object
-    public Person copy() {
-        return new Person(name, idNumber);
-    }
-
     @Override
     public boolean equals(Object other) {
         if (other == null || getClass() != other.getClass()) return false;
@@ -51,12 +39,10 @@ public class Person {
         return idNumber.equals(p.idNumber) &&
                 name.equals(p.name);
     }
-
     @Override
     public int hashCode() {
         return 17 * name.hashCode() + idNumber.hashCode();
     }
-
     @Override
     public String toString() {
         return name + "(" + idNumber + ")";

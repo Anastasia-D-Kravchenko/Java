@@ -1,19 +1,7 @@
 import java.util.Objects;
 
 public class Records {
-    public void main(String[] args) {
-        Car c = new Car("Toyota", "Camry");
-        System.out.println(c);
-
-        Motorcycle m1 = new Motorcycle("Kawasaki", "Vulcan");
-        Motorcycle m2 = new Motorcycle("Kawasaki", "Vulcan");
-
-        System.out.println(m1);
-        System.out.println(m1.hashCode() + " " + m2.hashCode());
-        System.out.println(m1.equals(m2));
-        System.out.println(m1.make() + " " + m1.model());
-    }
-    final class Car {
+    static final class Car {
         private final String make;
         private final String model;
 
@@ -45,4 +33,19 @@ public class Records {
     }
 
     record Motorcycle (String make, String model) {}
+}
+
+class cally{
+    public static void main(String[] args) {
+        Records.Car c = new Records.Car("Toyota", "Camry");
+        System.out.println(c);
+
+        Records.Motorcycle m1 = new Records.Motorcycle("Kawasaki", "Vulcan");
+        Records.Motorcycle m2 = new Records.Motorcycle("Kawasaki", "Vulcan");
+
+        System.out.println(m1);
+        System.out.println(m1.hashCode() + " " + m2.hashCode());
+        System.out.println(m1.equals(m2));
+        System.out.println(m1.make() + " " + m1.model());
+    }
 }

@@ -1,28 +1,28 @@
 public class ArrStack {
     private int[] elems;
     private int top = 0;
-
     public ArrStack(int maxSize) {
-        elems = new int[maxSize]; // Allocate an array with the specified maximum size.
+        elems = new int[maxSize];
     }
-
     public void push(int e) {
-        // Check for stack overflow (full stack) before pushing.
-        if (top == elems.length) {
-            throw new RuntimeException("Stack overflow!");
-        }
-        elems[top++] = e; // Push element to the top and increment top.
+        elems[top++] = e;
     }
-
     public int pop() {
-        // Check for underflow (empty stack) before popping.
-        if (empty()) {
-            throw new RuntimeException("Stack underflow!");
-        }
-        return elems[--top]; // Return element and decrement top.
+        return elems[--top];
     }
-
     public boolean empty() {
-        return top == 0; // Check if top is at the beginning (empty stack).
+        return top == 0;
+    }
+}
+
+class ArrStackTest {
+    public static void main(String[] args) {
+        ArrStack stack = new ArrStack(10);
+        for (int i = 0; i < 10; i++) {
+            stack.push((i*i-27)/(i+1));
+        }
+        while (!stack.empty()) {
+            System.out.println(stack.pop());
+        }
     }
 }

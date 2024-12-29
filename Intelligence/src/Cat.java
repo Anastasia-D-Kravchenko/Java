@@ -14,6 +14,8 @@ public class Cat {
         this.mother = mother;
         this.father = father;
     }
+
+
     public boolean isAdult(int currentDay, int currentMonth, int currentYear) {
         if (currentYear - birthYear > 1) {
             return true;

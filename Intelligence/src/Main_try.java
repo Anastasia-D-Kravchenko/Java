@@ -240,36 +240,36 @@ public class Main_try {
 //            System.out.println(dish);
 //        }
 //    }
-    public static void main(String[] args) {
-//        Dish[] dishes = {
-//                new Pierogi("Ruskie", 5, true, "Potato and Cheese"),
-//                new Barszcz("Czerwony", 3, true, "Red Beetroot"),
-//                new Dish("Salad", 2, false)
-//        };
-//        for (Dish dish : dishes) {
-//            System.out.println(dish);
+//    public static void main(String[] args) {
+////        Dish[] dishes = {
+////                new Pierogi("Ruskie", 5, true, "Potato and Cheese"),
+////                new Barszcz("Czerwony", 3, true, "Red Beetroot"),
+////                new Dish("Salad", 2, false)
+////        };
+////        for (Dish dish : dishes) {
+////            System.out.println(dish);
+////        }
+////        for (Dish dish : dishes) {
+////            dish.takeAPortion();
+////        }
+//        Phone[] phones = new Phone[3];
+//        phones[0] = new Phone("Wired", "Black");
+//        phones[1] = new CellPhone("GSM", "Silver");
+//        phones[2] = new Smartphone("4G", "Gold");
+//        // Add friends to the Smartphone
+//        Smartphone smartphone = (Smartphone) phones[2];
+//        smartphone.addFriend(new Persony("John", "Doe", "123-456-789"));
+//        smartphone.addFriend(new Persony("Jane", "Smith", "987-654-321"));
+//        // Make calls on each phone
+//        for (Phone phone : phones) {
+//            for (int i = 0; i < 10; i++) {
+//                phone.makeCall("Call " + i);
+//            }
 //        }
-//        for (Dish dish : dishes) {
-//            dish.takeAPortion(); 
+//        // Display call history for each phone
+//        for (Phone phone : phones) {
+//            phone.displayCallHistory();
+//            System.out.println();
 //        }
-        Phone[] phones = new Phone[3];
-        phones[0] = new Phone("Wired", "Black");
-        phones[1] = new CellPhone("GSM", "Silver");
-        phones[2] = new Smartphone("4G", "Gold");
-        // Add friends to the Smartphone
-        Smartphone smartphone = (Smartphone) phones[2];
-        smartphone.addFriend(new Persony("John", "Doe", "123-456-789"));
-        smartphone.addFriend(new Persony("Jane", "Smith", "987-654-321"));
-        // Make calls on each phone
-        for (Phone phone : phones) {
-            for (int i = 0; i < 10; i++) {
-                phone.makeCall("Call " + i);
-            }
-        }
-        // Display call history for each phone
-        for (Phone phone : phones) {
-            phone.displayCallHistory();
-            System.out.println();
-        }
-    }
+//    }
 }
