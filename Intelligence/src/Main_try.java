@@ -272,4 +272,19 @@ public class Main_try {
 //            System.out.println();
 //        }
 //    }
+public static void main(String[] args) {
+//    try {
+//        SmokeDetector.check();
+//    } catch (Alarm e) {
+//        System.out.println(e.getMessage());
+//    }
+//    Rocket rocket = new Rocket("Falcon 9", 500);
+//    rocket.refuel();
+//    try {
+//        rocket.start();
+//    } catch (Exception e) {
+//        System.out.println(e.getMessage());
+//    }
+
+}
 }
